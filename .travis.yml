@@ -5,7 +5,7 @@ jdk:
 notifications: 
     email:
         #change with your email
-        - ibnu.muzzakkir@amarbank.com 
+        - mianusman@msn.com 
 android:
   components:
     - platform-tools
