@@ -23,6 +23,7 @@ before_install:
   - echo 'export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"' >>~/.bash_profile
   - echo 'export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"' >>~/.bash_profile
   - PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+  - brew update
   - brew install gcc
   - brew install hello
   - brew install node
