@@ -17,13 +17,14 @@ android:
     - extra-android-m2repository
 # install dependencies
 before_install:
-  - ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
+  - ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
   - sudo apt-get install build-essential
   - echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >>~/.bash_profile
   - echo 'export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"' >>~/.bash_profile
   - echo 'export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"' >>~/.bash_profile
-  - PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-  # - brew install gcc
+  - PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH"
+  - brew update
+  - brew install gcc
   - brew install hello
   - brew install node
 install: 
