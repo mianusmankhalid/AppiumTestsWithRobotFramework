@@ -31,7 +31,8 @@ before_install:
   - brew install node
 install: 
   - "sudo pip install 'requests[security]'"
-  - "sudo pip install robotframework-appiumlibrary" 
+  - "sudo pip install robotframework-appiumlibrary"
+  - "sudo apt-get install libstdc++6"
   - npm install -g appium
 before_script: 
 # Create and start emulator
