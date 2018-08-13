@@ -24,7 +24,8 @@ before_install:
   - echo 'export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"' >>~/.bash_profile
   - PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
   - brew update
-  - brew install gcc
+  # - brew install gcc
+  - 'if [[ "$TRAVIS_OS_NAME" == "osx" && "$CC" == "gcc" ]]; then brew install gcc; CC=gcc-5; fi'
   - brew install hello
   - brew install node
 install: 
