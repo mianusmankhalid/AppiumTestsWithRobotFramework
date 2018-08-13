@@ -23,16 +23,10 @@ before_install:
   - echo 'export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"' >>~/.bash_profile
   - echo 'export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"' >>~/.bash_profile
   - PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-  - brew cask uninstall oclint
-  - brew tap oclint/formulae
-  - brew install oclint
-  - brew update
   - brew install gcc
   - brew install hello
   - brew install node
 install: 
-  - "sudo pip install --upgrade pip"
-  - "sudo pip install --upgrade setuptools"
   - "sudo pip install 'requests[security]'"
   - "sudo pip install robotframework-appiumlibrary" 
   - "npm install -g appium"
