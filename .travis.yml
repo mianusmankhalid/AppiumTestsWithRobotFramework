@@ -10,6 +10,7 @@ android:
   components:
     - platform-tools
     - tools
+    - tools
     - build-tools-24.0.2
     - android-22
     - android-24
@@ -24,6 +25,7 @@ before_install:
   - echo 'export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"' >>~/.bash_profile
   - PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
   - MATRIX_EVAL="CC=gcc-5 && CXX=g++-5"
+  - npm update -q
   # - brew update
   # - brew install gcc
   # - 'if [[ "$TRAVIS_OS_NAME" == "osx" && "$CC" == "gcc" ]]; then brew install gcc; CC=gcc-5; fi'
