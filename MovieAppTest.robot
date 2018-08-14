@@ -4,8 +4,8 @@ Library           AppiumLibrary       run_on_failure=Capture Page Screenshot
 *** Variables ***
 ${REMOTE_URL}           http://localhost:4723/wd/hub
 ${PLATFORM_NAME}        Android
-${PLATFORM_VERSION}     8.0
-${DEVICE_NAME}          ReactNative8_0
+${PLATFORM_VERSION}     5.1
+${DEVICE_NAME}          android-22
 ${APP}                  ${CURDIR}/apk/moviesapp.apk
 ${DELAY_TIME}           2s
 
