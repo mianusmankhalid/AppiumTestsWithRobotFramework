@@ -3,7 +3,6 @@ sudo: required
 jdk: oraclejdk8
 notifications: 
     email:
-        #change with your email
         - mianusman@msn.com 
 android:
   components:
@@ -36,19 +35,14 @@ before_install:
   - pyenv install 3.6.1
   - pyenv virtualenv 3.6.1 undang
   - pyenv activate undang
-  # - pip install -r requirements.txt
   - curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
   - sudo apt-get install nodejs
   - sudo apt-get install build-essential
   - PATH=$PATH:$JAVA_HOME/bin
   - npm install appium
-  # - npm install appium-doctor
-  # - "./node_modules/.bin/appium-doctor"
-  # - "./node_modules/.bin/appium --log-level info > appium_log.txt &"
 install: 
   - "sudo pip install 'requests[security]'"
-  - "sudo pip install robotframework-appiumlibrary" 
-  # - "npm install -g appium"
+  - "sudo pip install robotframework-appiumlibrary"
 before_script: 
 # Create and start emulator
   - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
@@ -56,5 +50,5 @@ before_script:
   - android-wait-for-emulator
   - adb shell input keyevent 82 &
 script:
-  - "sleep 20s"
+  - "sleep 10s"
   - "pybot MovieAppTest.robot"
