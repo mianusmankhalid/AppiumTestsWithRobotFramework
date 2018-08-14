@@ -23,11 +23,12 @@ before_install:
   - echo 'export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"' >>~/.bash_profile
   - echo 'export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"' >>~/.bash_profile
   - PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-  - brew update
+  - MATRIX_EVAL="CC=gcc-5 && CXX=g++-5"
+  # - brew update
   # - brew install gcc
-  - 'if [[ "$TRAVIS_OS_NAME" == "osx" && "$CC" == "gcc" ]]; then brew install gcc; CC=gcc-5; fi'
-  - brew install hello
-  - brew install node
+  # - 'if [[ "$TRAVIS_OS_NAME" == "osx" && "$CC" == "gcc" ]]; then brew install gcc; CC=gcc-5; fi'
+  # - brew install hello
+  # - brew install node
 install: 
   - "sudo pip install 'requests[security]'"
   - "sudo pip install robotframework-appiumlibrary" 
