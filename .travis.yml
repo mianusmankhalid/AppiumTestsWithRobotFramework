@@ -48,7 +48,7 @@ before_script:
   - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
   - emulator -avd test -no-audio -no-window &
   - android-wait-for-emulator
-  - emulator -list-avds
+  # - emulator -list-avds
   - adb shell input keyevent 82 &
 script:
   - "sleep 10s"
