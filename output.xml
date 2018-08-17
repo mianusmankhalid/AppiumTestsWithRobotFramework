@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20180814 14:22:22.966" generator="Robot 3.0.4 (Python 2.7.15 on darwin)">
+<robot generated="20180817 15:17:39.747" generator="Robot 3.0.4 (Python 2.7.15 on darwin)">
 <suite source="/Users/usmankhalid/backyard/AppiumTestsWithRobotFramework/MovieAppTest.robot" id="s1" name="MovieAppTest">
 <test id="s1-t1" name="sort_movie_test">
 <kw name="Filter Function">
@@ -11,54 +11,53 @@
 <arguments>
 <arg>${REMOTE_URL}</arg>
 <arg>platformName=${PLATFORM_NAME}</arg>
-<arg>platformVersion=${PLATFORM_VERSION}</arg>
 <arg>deviceName=${DEVICE_NAME}</arg>
 <arg>app=${APP}</arg>
 <arg>automationName=appium</arg>
 </arguments>
-<status status="PASS" endtime="20180814 14:22:37.116" starttime="20180814 14:22:23.196"></status>
+<status status="PASS" endtime="20180817 15:17:46.207" starttime="20180817 15:17:39.913"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>xpath=//android.widget.ImageView[contains(@clickable,'true')]</arg>
 </arguments>
-<msg timestamp="20180814 14:22:37.121" level="INFO">Clicking element 'xpath=//android.widget.ImageView[contains(@clickable,'true')]'.</msg>
-<status status="PASS" endtime="20180814 14:22:37.907" starttime="20180814 14:22:37.119"></status>
+<msg timestamp="20180817 15:17:46.208" level="INFO">Clicking element 'xpath=//android.widget.ImageView[contains(@clickable,'true')]'.</msg>
+<status status="PASS" endtime="20180817 15:17:47.049" starttime="20180817 15:17:46.207"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20180814 14:22:42.908" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20180814 14:22:42.908" starttime="20180814 14:22:37.907"></status>
+<msg timestamp="20180817 15:17:52.051" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180817 15:17:52.051" starttime="20180817 15:17:47.050"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>xpath=//android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[contains(@index,${POSITION})]</arg>
 </arguments>
-<msg timestamp="20180814 14:22:42.909" level="INFO">Clicking element 'xpath=//android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[contains(@index,0)]'.</msg>
-<status status="PASS" endtime="20180814 14:22:43.079" starttime="20180814 14:22:42.909"></status>
+<msg timestamp="20180817 15:17:52.052" level="INFO">Clicking element 'xpath=//android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[contains(@index,0)]'.</msg>
+<status status="PASS" endtime="20180817 15:17:52.292" starttime="20180817 15:17:52.051"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20180814 14:22:48.081" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20180814 14:22:48.081" starttime="20180814 14:22:43.079"></status>
+<msg timestamp="20180817 15:17:57.294" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180817 15:17:57.294" starttime="20180817 15:17:52.293"></status>
 </kw>
 <kw type="teardown" name="Close Application" library="AppiumLibrary">
 <doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" endtime="20180814 14:22:49.625" starttime="20180814 14:22:48.082"></status>
+<status status="PASS" endtime="20180817 15:17:58.010" starttime="20180817 15:17:57.294"></status>
 </kw>
-<status status="PASS" endtime="20180814 14:22:49.625" starttime="20180814 14:22:23.196"></status>
+<status status="PASS" endtime="20180817 15:17:58.010" starttime="20180817 15:17:39.913"></status>
 </kw>
-<status status="PASS" endtime="20180814 14:22:49.625" critical="yes" starttime="20180814 14:22:23.195"></status>
+<status status="PASS" endtime="20180817 15:17:58.011" critical="yes" starttime="20180817 15:17:39.912"></status>
 </test>
-<status status="PASS" endtime="20180814 14:22:49.627" starttime="20180814 14:22:22.970"></status>
+<status status="PASS" endtime="20180817 15:17:58.012" starttime="20180817 15:17:39.749"></status>
 </suite>
 <statistics>
 <total>
