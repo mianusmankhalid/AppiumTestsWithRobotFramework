@@ -60,3 +60,6 @@ script:
   - ./node_modules/.bin/appium &
   - "sleep 10s"
   - "pybot MovieAppTest.robot"
+after_script:
+  - curl --upload-file ./log.html https://transfer.sh/log.html
+  - curl --upload-file ./report.html https://transfer.sh/report.html
