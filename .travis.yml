@@ -62,8 +62,8 @@ script:
   - ./node_modules/.bin/appium-doctor
   - ./node_modules/.bin/appium --robot-address=127.0.0.1 --robot-port=4723&
   - "sleep 10s"
-  - robot -v deviceName:test -v appBinary:`pwd`/apk/moviesapp.apk MovieAppTest.robot
-#  - "pybot MovieAppTest.robot"
+  #- robot -v deviceName:test -v appBinary:`pwd`/apk/moviesapp.apk MovieAppTest.robot
+  - "pybot MovieAppTest.robot"
 after_script:
   - curl --upload-file ./log.html https://transfer.sh/log.html
   - curl --upload-file ./report.html https://transfer.sh/report.html
