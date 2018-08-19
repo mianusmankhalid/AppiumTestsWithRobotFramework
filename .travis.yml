@@ -45,9 +45,12 @@ before_install:
   - npm install appium-doctor
   - npm install appium
 install: 
-  - "sudo pip install 'requests[security]'"
-  - "sudo pip install robotframework-appiumlibrary"
+  - sudo pip install 'requests[security]'
+  - sudo pip install robotframework
+  - sudo pip install robotframework-appiumlibrary
   - sudo pip install urllib3
+  - sudo pip uninstall selenium
+  - sudo pip install selenium==3.3.1
 before_script: 
 # Create and start emulator
   - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
@@ -57,9 +60,10 @@ before_script:
   - adb shell input keyevent 82 &
 script:
   - ./node_modules/.bin/appium-doctor
-  - ./node_modules/.bin/appium &
+  - ./node_modules/.bin/appium --robot-address=127.0.0.1 --robot-port=4723&
   - "sleep 10s"
-  - "pybot MovieAppTest.robot"
+  - robot -v deviceName:test -v appBinary:`pwd`/apk/moviesapp.apk MovieAppTest.robot
+#  - "pybot MovieAppTest.robot"
 after_script:
   - curl --upload-file ./log.html https://transfer.sh/log.html
   - curl --upload-file ./report.html https://transfer.sh/report.html
