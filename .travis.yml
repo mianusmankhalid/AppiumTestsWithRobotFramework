@@ -49,8 +49,8 @@ install:
   - sudo pip install robotframework
   - sudo pip install robotframework-appiumlibrary
   - sudo pip install urllib3
-  - sudo pip uninstall selenium
-  - sudo pip install selenium==3.3.1
+  - sudo pip uninstall -y selenium
+  - sudo pip install -y selenium==3.3.1
 before_script: 
 # Create and start emulator
   - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
