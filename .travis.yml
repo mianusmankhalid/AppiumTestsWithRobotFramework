@@ -41,7 +41,10 @@ before_install:
   - sudo apt-get install nodejs
   - sudo apt-get install build-essential
   - PATH=$PATH:$JAVA_HOME/bin
+  - npm install appium-doctor
+  - appium-doctor
   - npm install appium
+  - appium &
 install: 
   - "sudo pip install 'requests[security]'"
   - "sudo pip install robotframework-appiumlibrary"
