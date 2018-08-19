@@ -8,10 +8,13 @@ ${DEVICE_NAME}          test
 ${APP}                  ${CURDIR}/apk/moviesapp.apk
 ${DELAY_TIME}           2s
 
+
+
 *** Keywords ***
 Filter Function
      [Arguments]    ${POSITION} 
      Open Application  ${REMOTE_URL}  platformName=${PLATFORM_NAME}  deviceName=${DEVICE_NAME}  app=${APP}  automationName=appium
+     Log To Console    Dir val is ${APP}
      Click Element  xpath=//android.widget.ImageView[contains(@clickable,'true')]
     #  //*[@class='android.widget.ImageView' and @contentDescription='More options' and @knownSuperClass='android.widget.ImageView']
     #  //*[@class='android.widget.ImageView' and @clickable='true']
