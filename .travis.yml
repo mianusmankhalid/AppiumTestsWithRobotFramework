@@ -48,6 +48,7 @@ install:
   - sudo pip install 'requests[security]'
   - sudo pip install robotframework
   - sudo pip install robotframework-appiumlibrary
+  - sudo pip install --upgrade robotframework-appiumlibrary
   - sudo pip install urllib3
   - echo 'y' | sudo pip uninstall selenium
   - echo 'y' | sudo pip install selenium==3.3.1
