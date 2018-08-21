@@ -45,8 +45,9 @@ before_install:
   - npm install appium-doctor
   - npm install appium
 install: 
+  - sudo pip install --upgrade pip
   - sudo pip install 'requests[security]'
-  - sudo pip install robotframework==2.7.2
+  - sudo pip install robotframework==2.8.2
   - sudo pip install robotframework-appiumlibrary
   - sudo pip install --upgrade robotframework-appiumlibrary
   - sudo pip install urllib3
