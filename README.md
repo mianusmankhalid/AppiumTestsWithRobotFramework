@@ -11,13 +11,13 @@ you just need an apk file to run your tests
 
 ## Running the tests
 
-you can write down your tests in .robot file and can run tests locally via following command
+you can write down your tests in .robot file and can run tests locally via
 
 ```
 pybot MovieAppTest.robot
 ```
 
-for travis you can change testing file name under script tag
+for travis you can change testing file name under script tag in .travis.yml file
 
 ### Things involve in this project :
 
