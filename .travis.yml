@@ -1,42 +1,59 @@
-sudo: true
 language: android
-jdk:
-    - oraclejdk8
-notifications: 
+sudo: true
+jdk: oraclejdk8
+notifications:
     email:
-        #change with your email
-        - ibnu.muzzakkir@amarbank.com 
+        # change email id for notifications
+        - mianusman@msn.com
 android:
   components:
-    - platform-tools
     - tools
-    - build-tools-24.0.2
+    - platform-tools
+    - build-tools-26.1.1
+    - android-26
     - android-22
     - android-24
-    - sys-img-armeabi-v7a-android-22
+    - extra-google-google_play_services
+    - extra-google-m2repository
     - extra-android-m2repository
+    - addon-google_apis-google-26
+    - sys-img-armeabi-v7a-android-22
+    - sys-img-armeabi-v7a-android-26
+    - sys-img-armeabi-v7a-android-24
+    - extra
+  licenses:
+    - 'android-sdk-preview-license-52d11cd2'
+    - 'android-sdk-license-.+'
+    - 'google-gdk-license-.+'
+python: 2.7
 # install dependencies
 before_install:
-  - ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
-  - sudo apt-get install build-essential
-  - echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >>~/.bash_profile
-  - echo 'export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"' >>~/.bash_profile
-  - echo 'export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"' >>~/.bash_profile
-  - PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-  - brew install gcc
-  - brew install hello
-  - brew install node
-install: 
-  - "sudo pip install 'requests[security]'"
-  - "sudo pip install robotframework-appiumlibrary" 
-  - "npm install -g appium"
+  - sudo apt-get update
+  - sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev
+  - nvm install 8.11.4
+  - node --version
+  # Require node global packages
+  - npm install -g appium-doctor
+  - npm install -g appium
+  - npm install -g wd
+  # Get the virtualenv in place
+  - pip install --user virtualenv
+  - virtualenv venv
+  - source venv/bin/activate
+  - pip install selenium pytest toolz robotframework robotframework-appiumlibrary urllib3
+  # Required appium-doctor necessities
+  - PATH=$PATH:$JAVA_HOME/bin
 before_script: 
 # Create and start emulator
+  - appium &
   - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
-  - emulator -avd test -no-skin -no-audio -no-window &
+  - emulator -avd test -no-window -no-audio &
   - android-wait-for-emulator
+  - emulator -list-avds
   - adb shell input keyevent 82 &
-script: 
-  - "appium &"
-  - "sleep 8s"
-  - "pybot MovieAppTest.robot"
+script:
+  - appium-doctor
+  - . venv/bin/activate && pybot MovieAppTest.robot && deactivate
+after_script:
+  - curl --upload-file ./log.html https://transfer.sh/log.html
+  - curl --upload-file ./report.html https://transfer.sh/report.html

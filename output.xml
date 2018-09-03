@@ -1,118 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20180809 19:01:03.336" generator="Robot 3.0.4 (Python 2.7.15 on darwin)">
-<suite source="/Users/usmankhalid/backyard/MobileAutomationTesting/MovieAppTest.robot" id="s1" name="MovieAppTest">
+<robot generated="20180902 10:54:57.010" generator="Robot 3.0.4 (Python 2.7.15 on darwin)">
+<suite source="/Users/usmankhalid/backyard/AppiumTestsWithRobotFramework/MovieAppTest.robot" id="s1" name="MovieAppTest">
 <test id="s1-t1" name="sort_movie_test">
 <kw name="Filter Function">
 <arguments>
-<arg>0</arg>
+<arg>1</arg>
 </arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Dir val is ${APP}</arg>
+</arguments>
+<status status="PASS" endtime="20180902 10:54:57.211" starttime="20180902 10:54:57.211"></status>
+</kw>
 <kw name="Open Application" library="AppiumLibrary">
 <doc>Opens a new application to given Appium server.</doc>
 <arguments>
 <arg>${REMOTE_URL}</arg>
 <arg>platformName=${PLATFORM_NAME}</arg>
-<arg>platformVersion=${PLATFORM_VERSION}</arg>
 <arg>deviceName=${DEVICE_NAME}</arg>
 <arg>app=${APP}</arg>
 <arg>automationName=appium</arg>
 </arguments>
-<status status="PASS" endtime="20180809 19:01:09.689" starttime="20180809 19:01:03.552"></status>
+<status status="PASS" endtime="20180902 10:55:03.655" starttime="20180902 10:54:57.211"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>xpath=//android.widget.ImageView[contains(@clickable,'true')]</arg>
 </arguments>
-<msg timestamp="20180809 19:01:09.689" level="INFO">Clicking element 'xpath=//android.widget.ImageView[contains(@clickable,'true')]'.</msg>
-<status status="PASS" endtime="20180809 19:01:10.764" starttime="20180809 19:01:09.689"></status>
+<msg timestamp="20180902 10:55:03.655" level="INFO">Clicking element 'xpath=//android.widget.ImageView[contains(@clickable,'true')]'.</msg>
+<status status="PASS" endtime="20180902 10:55:04.699" starttime="20180902 10:55:03.655"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20180809 19:01:15.765" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20180809 19:01:15.765" starttime="20180809 19:01:10.764"></status>
+<msg timestamp="20180902 10:55:09.701" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180902 10:55:09.702" starttime="20180902 10:55:04.699"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>xpath=//android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[contains(@index,${POSITION})]</arg>
 </arguments>
-<msg timestamp="20180809 19:01:15.766" level="INFO">Clicking element 'xpath=//android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[contains(@index,0)]'.</msg>
-<status status="PASS" endtime="20180809 19:01:15.924" starttime="20180809 19:01:15.765"></status>
+<msg timestamp="20180902 10:55:09.703" level="INFO">Clicking element 'xpath=//android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[contains(@index,1)]'.</msg>
+<status status="PASS" endtime="20180902 10:55:09.897" starttime="20180902 10:55:09.702"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20180809 19:01:20.926" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20180809 19:01:20.926" starttime="20180809 19:01:15.925"></status>
+<msg timestamp="20180902 10:55:14.900" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180902 10:55:14.900" starttime="20180902 10:55:09.898"></status>
 </kw>
 <kw type="teardown" name="Close Application" library="AppiumLibrary">
 <doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" endtime="20180809 19:01:21.617" starttime="20180809 19:01:20.926"></status>
+<status status="PASS" endtime="20180902 10:55:16.902" starttime="20180902 10:55:14.901"></status>
 </kw>
-<status status="PASS" endtime="20180809 19:01:21.617" starttime="20180809 19:01:03.552"></status>
+<status status="PASS" endtime="20180902 10:55:16.902" starttime="20180902 10:54:57.210"></status>
 </kw>
-<kw name="Filter Functions">
-<arguments>
-<arg>0</arg>
-</arguments>
-<kw name="Open Application" library="AppiumLibrary">
-<doc>Opens a new application to given Appium server.</doc>
-<arguments>
-<arg>${REMOTE_URL}</arg>
-<arg>platformName=${PLATFORM_NAME}</arg>
-<arg>platformVersion=${PLATFORM_VERSION}</arg>
-<arg>deviceName=${DEVICE_NAME}</arg>
-<arg>app=${APP}</arg>
-<arg>automationName=appium</arg>
-</arguments>
-<status status="PASS" endtime="20180809 19:01:26.263" starttime="20180809 19:01:21.618"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//android.widget.ImageView[contains(@clickable,'true')]</arg>
-</arguments>
-<msg timestamp="20180809 19:01:26.264" level="INFO">Clicking element 'xpath=//android.widget.ImageView[contains(@clickable,'true')]'.</msg>
-<status status="PASS" endtime="20180809 19:01:27.227" starttime="20180809 19:01:26.264"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>5s</arg>
-</arguments>
-<msg timestamp="20180809 19:01:32.228" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20180809 19:01:32.228" starttime="20180809 19:01:27.227"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[contains(@index,${POSITION})]</arg>
-</arguments>
-<msg timestamp="20180809 19:01:32.229" level="INFO">Clicking element 'xpath=//android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[contains(@index,0)]'.</msg>
-<status status="PASS" endtime="20180809 19:01:32.408" starttime="20180809 19:01:32.228"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>5s</arg>
-</arguments>
-<msg timestamp="20180809 19:01:37.410" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20180809 19:01:37.411" starttime="20180809 19:01:32.408"></status>
-</kw>
-<kw type="teardown" name="Close Application" library="AppiumLibrary">
-<doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" endtime="20180809 19:01:38.115" starttime="20180809 19:01:37.411"></status>
-</kw>
-<status status="PASS" endtime="20180809 19:01:38.115" starttime="20180809 19:01:21.617"></status>
-</kw>
-<status status="PASS" endtime="20180809 19:01:38.115" critical="yes" starttime="20180809 19:01:03.551"></status>
+<status status="PASS" endtime="20180902 10:55:16.903" critical="yes" starttime="20180902 10:54:57.210"></status>
 </test>
-<status status="PASS" endtime="20180809 19:01:38.117" starttime="20180809 19:01:03.339"></status>
+<status status="PASS" endtime="20180902 10:55:16.905" starttime="20180902 10:54:57.014"></status>
 </suite>
 <statistics>
 <total>
