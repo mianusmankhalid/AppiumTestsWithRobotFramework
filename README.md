@@ -1,4 +1,7 @@
-This is simple project for proof of concept continous testing with travis and robotframework 
+
+[![Build Status](https://travis-ci.org/mianusmankhalid/AppiumTestsWithRobotFramework.svg?branch=master)](https://travis-ci.org/mianusmankhalid/AppiumTestsWithRobotFramework)
+
+This is simple project for proof of concept for continous testing with travis and robotframework 
 
 # Technologies in used :
 
