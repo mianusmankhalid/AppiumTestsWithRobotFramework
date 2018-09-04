@@ -10,11 +10,11 @@ This project is mainly focused to test android application with appium via robot
 For testing on local machine
 
 ```
-Appium Server
-Android Virtual Device
+Run Appium Server
+Start Android Virtual Device
 ```
 
-in case of travis pipeline you don't need Appium Server and AVD on your machine
+in case of travis pipeline you don't need to run Appium Server and start AVD on your machine
 
 ## Requirement
 
@@ -32,10 +32,11 @@ for travis you can change testing file name under script tag in .travis.yml file
 
 ### Things involve in this project :
 
-1. appium 
+1. appium
 2. appium-doctor
 3. robotframework
-3. robotframework-appiumlibrary
-3. travis 
-4. android SDK 
+4. robotframework-appiumlibrary
+5. travis
+6. Appium Server
+7. android SDK
 
