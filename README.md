@@ -5,6 +5,17 @@
 
 This project is mainly focused to test android application with appium via robotframework and to create CI/CD pipeline using travis
 
+## Prerequisites
+
+For testing on local machine
+
+```
+Appium Server
+Android Virtual Device
+```
+
+in case of travis pipeline you don't need Appium Server and AVD on your machine
+
 ## Requirement
 
 you just need an apk file to run your tests
