@@ -5,6 +5,10 @@
 
 This project is mainly focused to test android application with appium via robotframework and to create CI/CD pipeline using travis
 
+```
+{% gist 98f3357e5f356da4c0b7e0ee5fe512e9 %}
+```
+
 ## Prerequisites
 
 For testing on local machine
